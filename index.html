@@ -4,131 +4,258 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juliane Müller Belmonte — Portfólio</title>
+  <!-- folha de estilo principal do portfólio -->
   <link rel="stylesheet" href="CSS/estilo.css" />
 </head>
 <body>
 
+  <!-- ========== NAVEGAÇÃO PRINCIPAL ==========
+       Menu fixo no topo, visível em todas as seções.
+       Os links usam âncoras para navegar sem recarregar a página. -->
   <nav>
     <div class="nav-logo">JM</div>
+
+    <!-- lista de links — oculta em mobile, aparece com a classe .nav-open via JS -->
     <ul>
       <li><a href="#sobre">Sobre Mim</a></li>
       <li><a href="#formacao">Formação</a></li>
       <li><a href="#portfolio">Portfólio</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <button class="nav-toggle">&#9776;</button>
+
+    <!-- ações à direita do menu -->
+    <div class="nav-actions">
+      <!-- botão para alternar entre tema claro e escuro (JS controla) -->
+      <button id="theme-btn" title="Alternar tema claro/escuro">☾</button>
+      <!-- botão hambúrguer visível apenas em telas pequenas -->
+      <button class="nav-toggle" aria-label="Abrir menu de navegação">&#9776;</button>
+    </div>
   </nav>
 
-  <!-- SOBRE MIM -->
+
+  <!-- ========== SEÇÃO 1: SOBRE MIM ==========
+       Apresentação pessoal, foto, bio e hobbies. -->
   <section id="sobre">
     <div class="hero-inner container">
+
+      <!-- foto de perfil com efeito hover (remove o filtro cinza) -->
       <div>
-        <img src="imagens/foto_juliane_muller.png" alt="Juliane Muller Belmonte" class="hero-photo" />
+        <img src="imagens/foto_juliane_muller.png" alt="Foto de Juliane Müller Belmonte" class="hero-photo" />
       </div>
+
       <div>
         <span class="hero-tag">Sobre Mim</span>
-        <h1 class="hero-name">Juliane Müller<br /></h1>
-        <p class="hero-role"> Recursos Humanos &amp; Estudante de Ciência de dados</p>
+        <h1 class="hero-name">Juliane Müller</h1>
+        <p class="hero-role">Recursos Humanos &amp; Estudante de Ciência de Dados</p>
+
+        <!-- parágrafos de apresentação -->
         <p class="hero-bio">
           Minha jornada no RH começou em 2019, vivenciando os desafios diários de processos manuais e decisões baseadas apenas na intuição. Em 2021, encontrei na Ciência de Dados a peça que faltava para transformar essa realidade.
         </p>
         <p class="hero-bio">
-          Hoje, atuo como uma ponte estratégica entre as necessidades humanas e as soluções tecnológicas. Minha missão é simples, mas ambiciosa: tirar o RH do modo "operacional repetitivo" e elevá-lo ao patamar consultivo e estratégico.
+          Hoje, atuo como uma ponte estratégica entre as necessidades humanas e as soluções tecnológicas. Minha missão é tirar o RH do modo "operacional repetitivo" e elevá-lo ao patamar consultivo e estratégico.
         </p>
         <p class="hero-bio">
           Com um pé nos processos de RH e outro na TI, desenvolvo automações e análises de dados que aceleram entregas e geram insights reais. Acredito que, ao automatizar o "apertar de tecla", devolvemos ao profissional de RH o tempo necessário para o que realmente importa: cuidar de pessoas.
         </p>
+
+        <!-- hobbies e interesses fora do trabalho -->
+        <div class="hobbies">
+          <p class="hobbies-titulo">Fora do trabalho:</p>
+          <ul class="hobbies-lista">
+            <li>📚 Leitura — comportamento humano e tecnologia</li>
+            <li>🥾 Trilhas e caminhadas ao ar livre</li>
+            <li>🍳 Culinária e novas receitas</li>
+            <li>🎧 Podcasts de RH, dados e inovação</li>
+          </ul>
+        </div>
+
+        <!-- botões de ação da hero -->
         <div class="hero-btns">
           <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
           <a href="#contato" class="btn btn-outline">Falar Comigo</a>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- FORMAÇÃO -->
+
+  <!-- ========== SEÇÃO 2: FORMAÇÃO ==========
+       Histórico educacional, cursos e idiomas. -->
   <section id="formacao">
     <div class="container">
+
       <div class="sec-header">
         <span class="sec-num">02</span>
         <h2 class="sec-title">Formação</h2>
         <p class="sec-sub">Minha trajetória acadêmica e de capacitação profissional.</p>
       </div>
 
+      <!-- timeline de formação — cada item representa um marco educacional -->
       <div class="timeline">
+
+        <!-- graduação atual -->
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <span class="tl-period">Em andamento</span>
-            <h3>Ciência de dados</h3>
-            <p>Uninter</p>
-            <p>Graduação com foco em banco de dados e interfaces digitais.</p>
+            <span class="tl-period">Em andamento — desde 2023</span>
+            <h3>Ciência de Dados</h3>
+            <p>Centro Universitário Uninter</p>
+            <p>Graduação com foco em banco de dados, análise de dados e interfaces digitais.</p>
           </div>
         </div>
+
+        <!-- curso de python -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-period">2022</span>
+            <h3>Python para Análise de Dados</h3>
+            <p>Alura — Formação Python</p>
+            <p>Fundamentos da linguagem, manipulação de dados com pandas e visualizações com matplotlib.</p>
+          </div>
+        </div>
+
+        <!-- curso de power bi -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-period">2021</span>
+            <h3>Power BI — Business Intelligence</h3>
+            <p>Microsoft Learn</p>
+            <p>Criação de dashboards, modelagem de dados e publicação de relatórios interativos.</p>
+          </div>
+        </div>
+
+        <!-- formação base -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-period">2018</span>
+            <h3>Ensino Médio Completo</h3>
+            <p>Colégio Estadual — Curitiba/PR</p>
+            <p>Conclusão do ensino médio com interesse em ciências exatas e humanidades.</p>
+          </div>
+        </div>
+
       </div>
+
+      <!-- bloco de idiomas — separado da timeline para melhor visualização -->
+      <div class="idiomas-grid">
+        <h3 class="idiomas-titulo">Idiomas</h3>
+        <div class="idiomas-lista">
+
+          <!-- cada item tem uma barra de progresso visual -->
+          <div class="idioma-item">
+            <span class="idioma-nome">Português</span>
+            <div class="idioma-barra">
+              <div class="idioma-nivel" style="width: 100%"></div>
+            </div>
+            <span class="idioma-label">Nativo</span>
+          </div>
+
+          <div class="idioma-item">
+            <span class="idioma-nome">Inglês</span>
+            <div class="idioma-barra">
+              <div class="idioma-nivel" style="width: 55%"></div>
+            </div>
+            <span class="idioma-label">Intermediário</span>
+          </div>
+
+          <div class="idioma-item">
+            <span class="idioma-nome">Espanhol</span>
+            <div class="idioma-barra">
+              <div class="idioma-nivel" style="width: 30%"></div>
+            </div>
+            <span class="idioma-label">Básico</span>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- PORTFÓLIO -->
+
+  <!-- ========== SEÇÃO 3: PORTFÓLIO ==========
+       Grade de projetos com links para detalhes. -->
   <section id="portfolio">
     <div class="container">
+
       <div class="sec-header">
         <span class="sec-num">03</span>
         <h2 class="sec-title">Portfólio</h2>
         <p class="sec-sub">Projetos desenvolvidos ao longo da minha jornada.</p>
       </div>
 
+      <!-- grade de projetos: 1 card destaque (largura total) + 3 cards menores -->
       <div class="proj-grid">
+
+        <!-- projeto destaque: o próprio portfólio (ocupa as 3 colunas) -->
         <article class="proj-card featured">
           <div class="proj-img proj-img-1"></div>
           <div class="proj-body">
             <span class="proj-tag">Web</span>
             <h3>Site Portfólio Pessoal</h3>
-            <p>Este próprio portfólio construído com HTML e CSS.</p>
-            <div class="techs"><span>HTML</span><span>CSS</span></div>
+            <p>Este portfólio foi construído do zero com HTML5, CSS3 puro e JavaScript vanilla — sem nenhum framework. Responsivo, com modo escuro e validação de formulário em JS.</p>
+            <div class="techs">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+            <a href="#sobre" class="link-projeto">Você já está aqui ↑</a>
           </div>
         </article>
 
+        <!-- projeto 2: automação de desligamento -->
         <article class="proj-card">
           <div class="proj-img proj-img-2"></div>
           <div class="proj-body">
             <span class="proj-tag">Automação</span>
-            <h3>Automação de Ponta a Ponta no Desligamento: Do Comunicado ao Parecer</h3>
-            <p>Redesenho do fluxo de RH para eliminar tarefas manuais, centralizando a postagem de pareceres e melhorando o tempo de resposta entre as áreas envolvidas.</p>
-            <div class="techs"><span>Power Automate</span><span>Share Point</span></div>
+            <h3>Automação de Ponta a Ponta no Desligamento</h3>
+            <p>Redesenho do fluxo de RH para eliminar tarefas manuais, centralizando pareceres e melhorando o tempo de resposta entre as áreas envolvidas.</p>
+            <div class="techs"><span>Power Automate</span><span>SharePoint</span></div>
+            <!-- projetos internos não possuem link público -->
+            <a href="#contato" class="link-projeto">Solicitar detalhes ↗</a>
           </div>
         </article>
 
+        <!-- projeto 3: onboarding digital -->
         <article class="proj-card">
           <div class="proj-img proj-img-3"></div>
           <div class="proj-body">
-            <span class="proj-tag">Melhoria</span>
-            <h3>Digital Onboarding & Employee Experience</h3>
-            <p>Solução estruturada para otimizar o fluxo de contratação, utilizando automações de ponta a ponta. O projeto engloba desde o portal de envio de documentos até o provisionamento de acessos e fluxos de boas-vindas.</p>
-            <div class="techs"><span>Share Point</span><span>Lists</span><span>Power Automate</span></div>
+            <span class="proj-tag">Melhoria de Processo</span>
+            <h3>Digital Onboarding &amp; Employee Experience</h3>
+            <p>Solução para otimizar o fluxo de contratação: portal de documentos, provisionamento de acessos e fluxos de boas-vindas automáticos.</p>
+            <div class="techs"><span>SharePoint</span><span>Lists</span><span>Power Automate</span></div>
+            <a href="#contato" class="link-projeto">Solicitar detalhes ↗</a>
           </div>
         </article>
 
+        <!-- projeto 4: automação de reajustes salariais -->
         <article class="proj-card">
           <div class="proj-img proj-img-4"></div>
           <div class="proj-body">
             <span class="proj-tag">Automação</span>
-            <h3>Automação de Reajustes</h3>
-            <p>Pipeline completo: Planilha → DocuSign → Microsoft Teams. O script lê a planilha, cria os envelopes, monitora assinaturas e notifica a equipe — 100% automático após o login.</p>
+            <h3>Automação de Reajustes Salariais</h3>
+            <p>Pipeline completo: Planilha → DocuSign → Microsoft Teams. Lê a planilha, cria envelopes, monitora assinaturas e notifica a equipe — 100% automático após o login.</p>
             <div class="techs">
               <span>Python 3</span><span>Selenium 4</span><span>openpyxl</span>
-              <span>requests</span><span>CDP</span><span>DocuSign</span>
-              <span>Teams Webhook</span><span>SharePoint</span>
+              <span>DocuSign</span><span>Teams Webhook</span>
             </div>
+            <a href="#contato" class="link-projeto">Solicitar detalhes ↗</a>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
+
+  <!-- ========== SEÇÃO 4: CONTATO ==========
+       Formulário com validação em JavaScript e simulação de envio. -->
   <section id="contato">
     <div class="container">
+
       <div class="sec-header">
         <span class="sec-num">04</span>
         <h2 class="sec-title">Contato</h2>
@@ -136,6 +263,8 @@
       </div>
 
       <div class="contato-grid">
+
+        <!-- informações de contato direto -->
         <div class="info-list">
           <div class="info-item">
             <div class="info-icon">✉</div>
@@ -153,34 +282,65 @@
           </div>
         </div>
 
-        <form class="form-card" onsubmit="return false;">
+        <!-- formulário de contato — validação feita via JS (script.js) -->
+        <form id="form-contato" class="form-card">
           <div class="form-row">
+
+            <!-- campo nome: obrigatório -->
             <div class="form-group">
               <label for="nome">Nome</label>
-              <input type="text" id="nome" placeholder="Seu nome" />
+              <input type="text" id="nome" placeholder="Seu nome completo" />
+              <span class="msg-erro">Por favor, preencha seu nome.</span>
             </div>
+
+            <!-- campo e-mail: obrigatório, valida formato -->
             <div class="form-group">
               <label for="email">E-mail</label>
               <input type="email" id="email" placeholder="seu@email.com" />
+              <span class="msg-erro">Informe um e-mail válido.</span>
             </div>
+
           </div>
+
+          <!-- assunto: opcional -->
           <div class="form-group">
             <label for="assunto">Assunto</label>
             <input type="text" id="assunto" placeholder="Sobre o que deseja falar?" />
           </div>
+
+          <!-- campo mensagem: obrigatório -->
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+            <span class="msg-erro">Por favor, escreva sua mensagem.</span>
           </div>
+
           <button type="submit" class="btn btn-primary full">Enviar Mensagem</button>
         </form>
+
       </div>
     </div>
   </section>
 
+
+  <!-- Modal de confirmação — aparece depois que o formulário é enviado com sucesso.
+       Permanece oculto (display:none) até o JS ativá-lo. -->
+  <div id="modal-sucesso" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+      <span class="modal-icone">✔</span>
+      <h3>Mensagem enviada!</h3>
+      <p>Obrigada pelo contato. Retornarei em breve.</p>
+      <button id="fechar-modal" class="btn btn-primary">Fechar</button>
+    </div>
+  </div>
+
+
   <footer>
-    <p>&copy; 2026 Juliane Muller Belmonte. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Juliane Müller Belmonte. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- script principal: menu mobile, tema claro/escuro e validação do formulário -->
+  <script src="JS/script.js"></script>
 
 </body>
 </html>
